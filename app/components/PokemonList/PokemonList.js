@@ -5,7 +5,7 @@ import SinglePokemon from '../SinglePokemon/SinglePokemon';
 import styles from './style';
 export default function PokemonList({ url }) {
   
-  const [ Pokemon, setPokemon ] = useState({id : 1 , name: '2'});
+  const [ Pokemon, setPokemon ] = useState(false);
   const [LmodalVisible, setLmodalVisible] = useState(false);
 
   useEffect(() => {
@@ -24,7 +24,9 @@ export default function PokemonList({ url }) {
   return (
      
     <View style={styles.box}>
-    
+
+      {Pokemon != false && 
+      <>
        <Modal animationType="slide" transparent={true} visible={LmodalVisible}>
          <SinglePokemon data={Pokemon} closeModal={setLmodalVisible}/>
         </Modal>
@@ -32,7 +34,10 @@ export default function PokemonList({ url }) {
         <Image source={{ uri: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${Pokemon.id}.png` }} style={styles.img} />
         <Text style={styles.txt}>{Pokemon.name.toUpperCase()}</Text>
        </Pressable>
-       
-     </View>
+      </>
+      }
+      
+     </View> 
+  
   );
 }

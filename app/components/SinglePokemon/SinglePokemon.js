@@ -37,28 +37,7 @@ export default function SinglePokemon({data, closeModal}) {
        <View style={styles.container}>
          <View style={styles.centeredView}>
            
-      <View style={styles.buttons}>
-       <View style={styles.button}>
-             <Pressable
-             onPress={() => goToLeft()}>
-             <Text style={styles.buttontext}>Back</Text>
-              </Pressable>
-             </View>
-          
-             <View style={styles.button}>
-             <Pressable
-             onPress={() => closeModal(false)}>
-             <Text style={styles.buttontext}>Close</Text>
-        </Pressable>
-             </View>
-             
-             <View style={styles.button}>
-               <Pressable
-             onPress={() => goToRight()}>
-             <Text style={styles.buttontext}>Next</Text>
-            </Pressable>
-             </View>
-           </View>
+      
            
            <Text style={styles.title}>Name : {Pokemon.name.toUpperCase()}</Text>
            
@@ -86,7 +65,28 @@ export default function SinglePokemon({data, closeModal}) {
                  })}
                </View>
              </View>
-
+<View style={styles.buttons}>
+       <View style={styles.button}>
+             <Pressable
+             onPress={() => goToLeft()}>
+             <Text style={styles.buttontext}>Back</Text>
+              </Pressable>
+             </View>
+          
+             <View style={styles.button}>
+             <Pressable
+             onPress={() => closeModal(false)}>
+             <Text style={styles.buttontext}>Close</Text>
+        </Pressable>
+             </View>
+             
+             <View style={styles.button}>
+               <Pressable
+             onPress={() => goToRight()}>
+             <Text style={styles.buttontext}>Next</Text>
+            </Pressable>
+             </View>
+           </View>
            </View>
           
        </View>

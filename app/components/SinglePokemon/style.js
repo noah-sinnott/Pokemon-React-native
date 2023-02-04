@@ -34,7 +34,7 @@ export default StyleSheet.create({
     borderRadius: 20,  
     borderWidth: 1,
     padding: '5%',
-    margin: 10
+    margin: '5%',
   },
   buttontext: {
     display: 'flex',
@@ -64,7 +64,7 @@ export default StyleSheet.create({
   statsContainer: {
     display: 'flex',
     alignContent: 'center',
-    height: '30%',
+    height: '28%',
   }, 
   title: {
     paddingTop: '10%',
